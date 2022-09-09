@@ -21,7 +21,7 @@ const verifyTokenAndAuthourization = (req, res, next) => {
 		if (req.user.id === req.params.id || req.user.isAdmin) {
 			next();
 		} else {
-			res.status(403).json("You are not allowed to peprform the operation!");
+			res.status(403).json("You are not allowed to perform the operation!");
 		}
 	});
 };
@@ -31,7 +31,7 @@ const verifyTokenAndAdmin = (req, res, next) => {
 		if (req.user.isAdmin) {
 			next();
 		} else {
-			res.status(403).json("You are not allowed to peprform the operation!");
+			res.status(403).json("Action requires admin priviledge");
 		}
 	});
 };
